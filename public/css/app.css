@@ -1,0 +1,197 @@
+:root {
+  --bg: #1a202c;
+  --fr: #53b3ac;
+  --fro: #53b3ac4a;
+  --bg-card: #2a303c;
+  --bg1: #3793ff;
+  --bg1-dark: #10204e;
+}
+
+.bg {
+   border-radius: 0.5rem; 
+}
+.bg1 {
+  background-color: var(--bg1);
+}
+.bg1-dark {
+  border: 1px solid var(--bg1);
+  background-color: var(--bg1-dark);
+}
+
+* {
+  color: var(--fr);
+}
+
+.page-body {
+  margin-top: 10rem;
+  width: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+}
+.page-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-title a {
+  color: #fff;
+}
+
+.todo {
+  width: 100%;
+}
+.todo-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.todo-item {
+  width: 100%;
+  padding: 1rem 2rem;
+  list-style: none;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100%;  background-color: var(--bg-card);
+}
+.todo-item h1, .todo-dates p {
+  margin: 0;
+  padding: 0;
+}
+
+.todo-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-dates p {
+  color: #aaa;
+}
+.todo-dates p span {
+  color: #fff;
+}
+
+.todo-status {
+  display: flex;
+  justify-content: space-between;
+  align-item: center;
+}
+.todo-status p {
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+}
+
+.form-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+.form-todo label {
+  width: 100%;  
+  color: #fff;
+  font-size: 1rem;
+}
+.form-todo input {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100%;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.5rem;
+  background: var(--bg);
+  border: 1px solid var(--fro);
+}
+.form-todo input:focus {
+  outline: none;
+  border: 1px solid var(--fr);
+}
+
+.form-todo select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg);
+  border: 1px solid var(--fro);
+}
+.form-todo select option {
+  color: var(--fr);
+}
+.form-todo select option[selected] {
+  color: var(--fr);
+  font-weight: bold;
+}
+.form-todo select option:hover {
+  background-color: var(--bg1-dark);
+}
+.form-todo select option[selected]:hover {
+  background-color: var(--bg1-dark);
+  color: var(--fr);
+}
+.form-todo select::placeholder {
+  color: var(--fro);
+}
+.form-todo select::placeholder:hover {
+  color: var(--fr);
+}
+
+.form-row, .form-column {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+}
+.form-row {
+  flex-basis: 100%; 
+  gap: 1rem;
+}
+.form-column {
+  flex-basis: 25%;
+} 
+
+.to-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+}
+.icon-style {
+  width: 2rem;
+  height: 2rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg);
+  border: 1px solid var(--fro);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+button:hover {
+  background-color: var(--bg1-dark);
+}
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+button:disabled:hover {
+  background-color: var(--bg1);
+}
+

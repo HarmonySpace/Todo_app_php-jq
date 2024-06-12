@@ -19,6 +19,25 @@ class TodoController extends Controller
         $todo->priority = $data['priority'];
         $todo->date_f = $data['date_f'];
         $todo->save();
-        return response()->json(['message' => 'Todo create successfully!'], 201);
+        return response()->json(['message' => 'Todo create successfully!'], 200);
+    }
+    public function edit($id) {
+        $todo = Todo::find($id);
+        return view('edit', compact('todo'));
+    }
+    public function update(Request $request) {
+        $data = json_decode($request->getContent(),true);
+        $todo = Todo::find($data['id']);
+        $todo->name = $data['name'];
+        $todo->status = $data['status'];
+        $todo->priority = $data['priority'];
+        $todo->date_f = $data['date_f'];
+        $todo->save();
+        return response()->json(['message' => 'Todo updated successfully!'], 200);    
+    }
+    public function delete($id) {
+        $todo = Todo::find($id);
+        $todo->delete();   
+        return $this->index();
     }
 }

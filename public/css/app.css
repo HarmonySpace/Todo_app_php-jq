@@ -65,20 +65,18 @@
   margin: 0;
   padding: 0;
 }
-
-.todo-title {
+.container-1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
-
 .todo-dates p {
   color: #aaa;
 }
 .todo-dates p span {
   color: #fff;
 }
-
 .todo-status {
   display: flex;
   justify-content: space-between;
@@ -87,6 +85,9 @@
 .todo-status p {
   color: #fff;
   padding: 0.3rem 0.5rem;
+}
+.todo-id {
+  color: #fff;
 }
 
 .form-todo {

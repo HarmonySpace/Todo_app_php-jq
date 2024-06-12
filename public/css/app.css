@@ -56,6 +56,7 @@
   width: 70vw;
   display: flex;
   flex-wrap: wrap;
+  gap: 2rem;
   justify-content: start;
   align-items: center;
 }
@@ -84,15 +85,18 @@
 }
 .todo-item {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 0.5rem 3rem;
   list-style: none;
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 100%;  background-color: var(--bg-card);
 }
-.todo-item h1, .todo-dates p {
+.todo-title, .todo-dates p {
   margin: 0;
   padding: 0;
+}
+.todo-title {
+  font-size: 2rem;
 }
 .container-1 {
   display: flex;
@@ -107,9 +111,7 @@
   color: #fff;
 }
 .todo-status {
-  display: flex;
-  justify-content: space-between;
-  align-item: center;
+  gap: 2rem;
 }
 .todo-status p {
   color: #fff;
@@ -200,6 +202,10 @@
   width: 2rem;
   height: 2rem;
 }
+.icon-style:hove {
+  fill: var(--bg1);
+  color: var(--bg1);
+}
 
 button {
   width: 100%;
@@ -225,3 +231,25 @@ button:disabled:hover {
   background-color: var(--bg1);
 }
 
+.button {
+   padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg);
+  border: 1px solid var(--fro);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.button:hover {
+  background-color: var(--fr);
+}
+.button:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.button:disabled:hover {
+  background-color: var(--bg1);
+}

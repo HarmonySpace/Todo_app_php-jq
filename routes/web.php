@@ -22,4 +22,11 @@ Route::get('/', [TodoController::class, 'index']);
 Route::get('/add', function () {
     return view('add');
 });
-Route::post('/create', [TodoController::class, 'store']);
+Route::post('/create', [TodoController::class, 'store'])->name('todo.create');
+Route::post('/update', [TodoController::class, 'update'])->name('todo.update');
+Route::get('/delete/${id}', [TodoController::class, 'delete'])->name('todo.delete');
+Route::get('/edit/${id}', [TodoController::class, 'edit'])->name('todo.edit');
+
+
+
+

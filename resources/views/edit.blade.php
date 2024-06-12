@@ -5,7 +5,6 @@ Edit
 @endsection
 
 @section('content')
-{{$todo}}
 <div class='page-title'>
 	<div class="to-back">
 		<a href="/"><x-heroicon-o-arrow-left class="icon-style" /></a>

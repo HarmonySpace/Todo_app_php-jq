@@ -5,6 +5,11 @@
   --bg-card: #2a303c;
   --bg1: #3793ff;
   --bg1-dark: #10204e;
+  --bg2: #686D76;
+  --bg2-dark: #373A40;
+  --bg3: #A91D3A;
+  --bg3-dark: #6C0345;
+
 }
 
 .bg {
@@ -16,6 +21,27 @@
 .bg1-dark {
   border: 1px solid var(--bg1);
   background-color: var(--bg1-dark);
+}
+.bg2 {
+  background-color: var(--bg2);
+}
+.bg2-dark {
+  border: 1px solid var(--bg2);
+  background-color: var(--bg2-dark);
+}
+.bg3 {
+  background-color: var(--bg3);
+}
+.bg3-dark {
+  border: 1px solid var(--bg3);
+  background-color: var(--bg3-dark);
+}
+.bg4 {
+  background-color: var(--fr);
+}
+.bg4-dark {
+  border: 1px solid var(--fr);
+  background-color: var(--bg);
 }
 
 * {

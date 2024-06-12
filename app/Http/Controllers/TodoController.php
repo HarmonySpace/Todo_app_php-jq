@@ -40,4 +40,14 @@ class TodoController extends Controller
         $todo->delete();   
         return $this->index();
     }
+    public function check($id) {
+        $todo = Todo::find($id);
+        if ($todo->status === "done") {
+            $todo->status = "pending";   
+        } else {
+            $todo->status = "done";
+        }
+        $todo->save();   
+        return $this->index();
+    }
 }

@@ -9,7 +9,10 @@
   --bg2-dark: #373A40;
   --bg3: #A91D3A;
   --bg3-dark: #6C0345;
+}
 
+* {
+  color: var(--fr);
 }
 
 .bg {
@@ -43,9 +46,9 @@
   border: 1px solid var(--fr);
   background-color: var(--bg);
 }
-
-* {
-  color: var(--fr);
+.disable {
+  color: var(--bg2-dark);
+  fill: var(--bg2-dark);
 }
 
 .page-body {

@@ -17,7 +17,9 @@ Home
 				<h1>{{ $todo->name }}</h1>
 				<div class="container-1">
 					@if ($todo->status === "done")
-					 	<x-heroicon-s-check-circle class="icon-style" />
+						<a href="{{ route('todo.check', $todo->id) }}"><x-heroicon-s-check-circle class="icon-style" /></a>
+					@else
+						<a href="{{ route('todo.check', $todo->id) }}"><x-heroicon-s-check-circle class="icon-style disable" /></a>
 					@endif
 					<a href="{{ route('todo.edit', $todo->id) }}"><x-heroicon-o-pencil class="icon-style" /></a>
 					<a href="{{ route('todo.delete', $todo->id) }}"><x-heroicon-o-trash class="icon-style" /></a>

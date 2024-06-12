@@ -13,9 +13,13 @@ Home
 	<ul class="todo-list">
 	@foreach ($todos as $todo)
 		<li class="bg todo-item">
-			<div class="todo-title">
+			<div class="container-1">
 				<h1>{{ $todo->name }}</h1>
-				<a href="/"><x-heroicon-o-pencil class="icon-style" /></a>
+				<div class="container-1">
+					<a href="{{ route('todo.edit', $todo->id) }}"><x-heroicon-o-pencil class="icon-style" /></a>
+					<a href="{{ route('todo.delete', $todo->id) }}"><x-heroicon-o-trash class="icon-style" /></a>
+
+				</div>
 			</div>
 			<div class="todo-dates">
 				<p>Create in: <span>{{ $todo->date_c }}</span></p>
